@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-# NOTE: Editing this file in the container changes the file in the host directory.
-
 from __future__ import print_function
 import time
 import sys
