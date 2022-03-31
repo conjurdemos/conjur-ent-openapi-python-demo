@@ -44,5 +44,5 @@ app will:
 
 ## python_app.py
 The Python example application is in the bin directory and mounted in the Python
-container. You can edit the app run it in the container to test it. It is meant to
+container. You can edit the app then run it in the container to test it. It is meant to
 provide you with a framework for experimentation.
