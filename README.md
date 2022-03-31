@@ -19,12 +19,12 @@ There are three steps to running the demo:
  - run the start script
  - edit/run the test python client
 
-##0-config.sh:
+## 0-config.sh:
 You first need to edit the 0-config.sh file with:
  - the path to the OpenAPI spec repo
  - specific values for your Conjur Enterprise environment.
 
-##1-start.sh
+## 1-start.sh
 This script only needs be run once. It will:
  - source the config.sh file;
  - generate a Python client library named "py_client" in the current directory;
@@ -32,7 +32,7 @@ This script only needs be run once. It will:
  - load the Python client library in the application environment;
  - run 2-run_python_test_app.sh script to run the test application in the container.
 
-##2-run_python_test_app.sh
+## 2-run_python_test_app.sh
 This script runs the python application in the container. The app exercises several
 API endpoints and is largely built from the code samples in the documentation. The 
 app will:
@@ -42,7 +42,7 @@ app will:
 - Store and retrieve secrets
 - Delete a secret
 
-##python_app.py
+## python_app.py
 The Python example application is in the bin directory and mounted in the Python
 container. You can edit the app run it in the container to test it. It is meant to
 provide you with a framework for experimentation.
