@@ -37,8 +37,8 @@ This script runs the python application in the container. The app exercises seve
 API endpoints and is largely built from the code samples in the documentation. The 
 app will:
 - Authenticate as an admin user
-- Rotate a non-admin user's API key
 - Load policies
+- Rotate a non-admin user's API key
 - Store and retrieve secrets
 - Delete a secret
 
