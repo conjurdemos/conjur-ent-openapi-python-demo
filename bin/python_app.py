@@ -80,20 +80,6 @@ with conjur.ApiClient(config) as api_client:
     api_client.configuration.api_key_prefix = {'Authorization': 'Token'}
 
     ##############################################
-    # API key rotation
-
-    # Rotate Alice user's API key
-    print("\nRotating Alice user\'s API key...")
-    try:
-        # Rotates a role's API key.
-        new_api_key = authn_api.rotate_api_key(account=ACCOUNT_NAME,
-						role="user:alice",
-						x_request_id=x_request_id)
-        print("New API key:", new_api_key)
-    except ApiException as e:
-        print("Exception when calling AuthenticationApi->rotate_api_key: %s\n" % e)
-
-    ##############################################
     # Load policies
 
     simple_policy = None
@@ -129,6 +115,19 @@ with conjur.ApiClient(config) as api_client:
     except ApiException as e:
         print("Exception when calling PoliciesApi->load_policy: %s\n" % e)
 
+    ##############################################
+    # API key rotation
+
+    # Rotate Alice user's API key
+    print("\nRotating Alice user\'s API key...")
+    try:
+        # Rotates a role's API key.
+        new_api_key = authn_api.rotate_api_key(account=ACCOUNT_NAME,
+						role="user:alice",
+						x_request_id=x_request_id)
+        print("New API key:", new_api_key)
+    except ApiException as e:
+        print("Exception when calling AuthenticationApi->rotate_api_key: %s\n" % e)
 
     ##############################################
     # Secret set/get
